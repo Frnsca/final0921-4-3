@@ -1,0 +1,10 @@
+{
+  "name":"Catatan Keuangan Pribadi",
+  "short_name":"Keuangan",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#f4f8f4",
+  "theme_color":"#6fa58f",
+  "description":"Aplikasi catatan keuangan pribadi 100% offline.",
+  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

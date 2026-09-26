@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#8FB9A8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Catatan Keuangan">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><title>Catatan Keuangan</title>
+</head><body><div id="app">
+<header class="topbar"><div><div class="brand"><span class="brand-icon">🐼</span><span id="appTitle">Catatan Keuangan</span></div><div class="subtitle" id="today"></div></div></header>
+<main>
+<section class="hero-card"><div class="hero-head"><div><div class="muted" id="mainBalanceLabel">Total saldo</div><div class="balance" id="mainBalance">Rp0</div></div><button class="eye-btn" id="hideBalanceBtn">👁️</button></div><div class="hero-row"><div><span id="incomeLabel">Pemasukan</span><strong id="income">Rp0</strong></div><div><span id="expenseLabel">Pengeluaran</span><strong id="expense">Rp0</strong></div></div></section>
+<section class="accounts-section"><div class="section-title"><h2 id="accountsTitle">Akun</h2><button class="small-add" id="addAccountBtn">＋</button></div><div class="swipe-hint" id="accountSwipeHint">Tekan dompet untuk melihat akun</div><div class="account-scroller" id="accountList"></div></section>
+<section class="calendar-card"><div class="section-title"><h2 id="calendarTitle">Kalender</h2></div><div class="calendar-controls"><button class="cal-nav" id="prevMonth">‹</button><strong id="calendarMonthLabel"></strong><button class="cal-nav" id="nextMonth">›</button></div><div class="calendar-weekdays" id="calendarWeekdays"></div><div class="calendar-grid" id="calendarGrid"></div><div class="calendar-filters" id="calendarFilters"><div class="filter-field"><label id="filterAmountLabel">Nominal</label><input id="calendarAmountFilter" type="text" inputmode="numeric" autocomplete="off" placeholder="Cari nominal"></div><div class="filter-field"><label id="filterCategoryLabel">Kategori</label><select id="calendarCategoryFilter"></select></div></div><div class="selected-date-label" id="selectedDateLabel"></div><div id="selectedDateTx"></div><div class="all-transactions-head"><h3 id="allTransactionsTitle">Semua transaksi</h3><button class="small-add" id="addTransactionBtn">＋</button></div><div id="transactionList"></div></section>
+<section class="analytics-card"><div class="section-title"><h2 id="chartTitle">Ringkasan pengeluaran</h2></div><div id="expenseChart"></div></section>
+<section class="recurring-card"><div class="section-title"><h2 id="recurringTitle">Pengeluaran tetap per bulan</h2><button class="small-add" id="addRecurringBtn">＋</button></div><div id="recurringList"></div></section>
+<section class="planning-card"><div class="section-title"><h2 id="budgetTitle">Budget Bulanan</h2><button class="small-add" id="editBudgetBtn">✎</button></div><div id="budgetCard"></div></section>
+<section class="planning-card"><div class="section-title"><h2 id="savingsTitle">Target Tabungan</h2><button class="small-add" id="editSavingsBtn">✎</button></div><div id="savingsCard"></div></section>
+
+</main>
+<nav class="bottom-nav"><button class="nav active" data-tab="home">⌂<span id="navHome">Beranda</span></button><button class="nav" data-tab="transactions">↕<span id="navTransactions">Transaksi</span></button><button class="fab" id="fab">＋</button><button class="nav" data-tab="categories">🗂️<span id="navCategories">Kategori</span></button><button class="nav" data-tab="settings">⚙<span id="navSettings">Pengaturan</span></button></nav>
+</div><div class="modal" id="modal"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle"></h3><button class="close" id="closeModal">×</button></div><div id="modalBody"></div></div></div><script src="app.js"></script></body></html>
